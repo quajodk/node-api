@@ -1,0 +1,26 @@
+{
+  "name": "eit-app-api",
+  "version": "1.0.0",
+  "description": "Node API",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test/index.test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quajodk/node-api.git"
+  },
+  "keywords": [
+    "heroku"
+  ],
+  "author": "Quajo Duke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quajodk/node-api/issues"
+  },
+  "homepage": "https://github.com/quajodk/node-api#readme"
+}
