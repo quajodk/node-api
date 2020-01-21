@@ -14,10 +14,10 @@ const eit = {
 
 // assert that data.create callback false
 it('data.create should callback false', done => {
-  const testValue = data.create('test', eit.email, eit, err => {
-    const val = err;
-    return val;
-  });
+  const callback = err => {
+    return false;
+  };
+  const testValue = data.create('test', eit.email, eit, callback);
   console.log(testValue);
   assert.strictEqual(
     testValue,
