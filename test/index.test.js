@@ -45,23 +45,23 @@ _app.runTests = () => {
       const subTests = _app.tests[key];
       for (let testName in subTests) {
         if (subTests.hasOwnProperty(testName)) {
-          (() => {
+          (async () => {
             let tmpTestName = testName;
             let testValue = subTests[testName];
             // Call the test
             try {
-              testValue(() => {
-                // If it calls back without failing that means it succeded, so log it in green
+              await testValue(() => {
+                // If it calls back without failing that means it succeeded, so log it in green
                 console.log('\x1b[32m%s\x1b[0m', tmpTestName);
                 counter++;
                 success++;
-                console.log(counter, limit);
+
                 if (counter === limit) {
                   _app.produceTestResults(limit, success, errors);
                 }
               });
             } catch (error) {
-              // If it throwns then it failed, so capture the error and log it in red
+              // If it throws then it failed, so capture the error and log it in red
               errors.push({
                 name: testName,
                 error: error
