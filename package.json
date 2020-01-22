@@ -8,7 +8,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "node test/index.test",
+    "test": "node test/index.test.js",
     "start": "node index.js"
   },
   "repository": {
