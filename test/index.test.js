@@ -2,8 +2,15 @@
  * Test Runner
  *
  */
+
+process.env.PORT = 4000;
+
 it = (testDescription, testFunction) => {
   _app.tests.unit[testDescription] = testFunction;
+};
+
+describe = (testDescription, testFunction) => {
+  _app.tests.api[testDescription] = testFunction;
 };
 
 // Application Logic fro the Test Runner
@@ -13,9 +20,10 @@ _app = {};
 _app.tests = {};
 
 _app.tests.unit = {};
+_app.tests.api = {};
 
-require('./unit.test');
-// require('./api');
+// require('./unit.test');
+require('./api.test');
 
 // Count all the Tests
 _app.countTests = () => {
@@ -104,6 +112,8 @@ _app.produceTestResults = (limit, success, errors) => {
 
   console.log('');
   console.log('--------END TEST REPORT--------');
+
+  process.exit(0);
 };
 
 // Run Application Tests

@@ -91,3 +91,5 @@ const PORT = process.env.PORT || 3000;
 server.httpServer.listen(PORT, () => {
   console.log(`Server started on ${PORT}`);
 });
+
+module.exports = server;

@@ -1,7 +1,6 @@
 // Dependencies
 const data = require('../lib/data');
 const assert = require('assert');
-const util = require('util');
 
 // test data
 const eit = {
