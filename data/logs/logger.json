@@ -1,0 +1,4 @@
+{"data":{"firstName":"Everybody","lastName":"Nice body","email":"body@gmail.com","age":"20","country":"Cote d'Ivore"},"requestMethod":"post","status":"operation was successful","time":1579907808758},
+{"data":{"firstName":"Everybody","lastName":"Nice body","email":"body@gmail.com","age":"20","country":"Cote d'Ivore"},"requestMethod":"get","status":"operation was successful","time":1579907897111},
+{"data":{"firstName":"Everybody","lastName":"Curve body","email":"body@gmail.com","age":"25","country":"Zimbabwe"},"requestMethod":"put","status":"operation was successful","time":1579907982048},
+{"data":{"message":"EIT deleted successfully"},"requestMethod":"delete","status":"operation was successful","time":1579908034333},
