@@ -56,6 +56,61 @@ describe('POST / should create eit and return 200 created eit data', async done 
   });
 
   await _data.delete('data', eit.email);
+  done();
+});
+
+// making GET request to / should return all eit in array and status code of 200
+describe('GET / should return all eits in array and 200 status code', async done => {
+  api.makeRequest('GET', '/', '', (statusCode, data) => {
+    assert.strictEqual(statusCode, 200);
+    assert.strictEqual(Array.isArray(data), true);
+    assert.strictEqual(data.length > 0, true);
+  });
+
+  done();
+});
+
+// making a put request to / should update eit and return 200 res code and the updated eit data
+describe('PUT / should update eit and return 200 and updated eit data', async done => {
+  // eit data
+  const eitUpdate = {
+    email: 'test1@meltwater.com',
+    firstName: 'test',
+    lastName: 'API',
+    age: '25',
+    country: 'testNation'
+  };
+
+  await _data.create('data', eitUpdate.email, eitUpdate);
+
+  const payload = JSON.stringify({
+    email: 'test1@meltwater.com',
+    firstName: 'testing API',
+    lastName: 'working',
+    age: '25',
+    country: 'testNation'
+  });
+
+  api.makeRequest('PUT', '/', payload, (statusCode, data) => {
+    assert.strictEqual(statusCode, 200);
+    assert.strictEqual(typeof data, 'object');
+    assert.strictEqual(data.firstName, 'testing');
+  });
+
+  await _data.delete('data', eitUpdate.email);
+  done();
+});
+
+// Delete request to / should delete eit and return 200 status code
+describe('DELETE / should delete eit and return 200 status code', async done => {
+  api.makeRequest(
+    'DELETE',
+    '/?email=test@meltwater.com',
+    '',
+    (statusCode, data) => {
+      assert.strictEqual(statusCode, 200);
+    }
+  );
 
   done();
 });

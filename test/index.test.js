@@ -22,7 +22,7 @@ _app.tests = {};
 _app.tests.unit = {};
 _app.tests.api = {};
 
-// require('./unit.test');
+require('./unit.test');
 require('./api.test');
 
 // Count all the Tests
