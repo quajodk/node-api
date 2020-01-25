@@ -1,0 +1,10 @@
+{"data":{},"status":"operation was successful","time":1579911298398}
+{"data":{},"status":"operation was successful","time":1579911408755}
+{"data":{"firstName":"Alfred","lastName":"Do-nani","email":"alfred@gmail.com","age":"26","country":"Ghana"},"requestMethod":"get","status":"operation was successful","time":1579911432022}
+{"data":{"message":"EIT deleted successfully"},"requestMethod":"delete","status":"operation was successful","time":1579911482128}
+{"data":{},"status":"operation was successful","time":1579911527057}
+{"data":{"firstName":"Kingsley","lastName":"Oga","email":"kingley@gmail.com","age":"26","country":"Nigeria"},"requestMethod":"get","status":"operation was successful","time":1579911556721}
+{"data":{"message":"EIT deleted successfully"},"requestMethod":"delete","status":"operation was successful","time":1579911564892}
+{"data":{},"requestMethod":"delete","status":"operation failed","time":1579911613289}
+{"data":{"firstName":"Afia","lastName":"Curvy body","email":"afia@gmail.com","age":"25","country":"Ghana"},"requestMethod":"post","status":"operation was successful","time":1579911671986}
+{"data":{"firstName":"Afia","lastName":"Odo","email":"afia@gmail.com","age":"25","country":"Ghana"},"requestMethod":"put","status":"operation was successful","time":1579911729798}
